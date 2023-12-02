@@ -1,0 +1,3 @@
+# Cloudflare style redirects file
+/version.json https://raw.githubusercontent.com/gregtwallace/legocerthub/master/version.json 302
+
