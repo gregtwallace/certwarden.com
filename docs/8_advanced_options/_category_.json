@@ -1,0 +1,8 @@
+{
+  "label": "Advanced Options",
+  "position": 8,
+  "link": {
+    "type": "generated-index",
+    "description": "These are additional configuration options that may be needed for some advanced use cases."
+  }
+}
