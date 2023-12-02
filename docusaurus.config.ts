@@ -58,10 +58,15 @@ const config: Config = {
       },
       items: [
         {
-          type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
+          to: 'docs/category/getting-started',
           position: 'left',
-          label: 'Tutorial',
+          label: 'Getting Started',
+        },
+        {
+          type: 'docSidebar',
+          sidebarId: 'docs',
+          position: 'left',
+          label: 'Docs',
         },
       ],
     },
@@ -69,11 +74,15 @@ const config: Config = {
       style: 'dark',
       links: [
         {
-          title: 'Docs',
+          title: 'Learn',
           items: [
             {
-              label: 'Tutorial',
-              to: '/docs/intro',
+              label: 'Getting Started',
+              to: 'docs/category/getting-started',
+            },
+            {
+              label: 'Docs',
+              to: 'docs/background',
             },
           ],
         },
