@@ -4,6 +4,25 @@ sidebar_position: 1
 
 # Configuration File
 
-Add Warning
+LeGo uses a single configuration file: `./data/config.yaml`. This file 
+can be manually edited but you most likely will not need to do so.
 
-TO-DO
+:::warning
+You can have a perfectly functional LeGo Server without ever editing this 
+file manually. Only do so if you review the documentation and determine 
+you need to.
+:::
+
+Config file documentation is included with both the Docker and binary 
+file distributions. Rather than try and keep this documentation in sync 
+with those, here are the links:
+
+- [`config.example.yaml`](https://github.com/gregtwallace/legocerthub-backend/blob/master/config.example.yaml): 
+  Documentation of available options and what they do.
+- [`config.default.yaml`](https://github.com/gregtwallace/legocerthub-backend/blob/master/config.default.yaml):
+  Default values for the config options if not specified.
+- [`config.changelog.md`](https://github.com/gregtwallace/legocerthub-backend/blob/master/config.changelog.md):
+  Change log of config options across LeGo and config schema versions.
+
+These are the most recent master branch versions. You should refer to 
+the versions bundled with your release for complete accuracy.
