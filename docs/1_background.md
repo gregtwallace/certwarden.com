@@ -22,4 +22,4 @@ clients and replaces it with one standard secured GET call.
 
 ## Functional Diagram
 
-![Lego CertHub logo](/img/docs/function_diagram.webp)
+![Lego CertHub Diagram](/img/docs/function_diagram.webp)
