@@ -11,10 +11,10 @@ function HomepageHeader() {
   return (
     <header
       className={
-        'hero row text--center margin-vert--none padding-horiz--xl padding-vert--md'
+        'hero row margin-vert--none padding-horiz--xl padding-vert--md'
       }
     >
-      <div className={'col col--4 ' + clsx(styles['heroBanner'])}>
+      <div className={'col col--4 col--offset-1 ' + clsx(styles['heroBanner'])}>
         <Heading as='h1' className='hero__title'>
           {siteConfig.tagline}
         </Heading>
@@ -22,7 +22,7 @@ function HomepageHeader() {
         <p className='hero__subtitle'>Your entire PKI at your fingertips.</p>
       </div>
 
-      <div className='col col--8'>
+      <div className='col col--7'>
         <img src='/img/screenshots/dashboard.png' />
       </div>
     </header>
