@@ -77,7 +77,7 @@ const config: Config = {
             },
             {
               label: 'Docs',
-              to: 'docs/background',
+              to: 'docs/introduction',
             },
           ],
         },
