@@ -58,11 +58,6 @@ const config: Config = {
       },
       items: [
         {
-          to: 'docs/category/getting-started',
-          position: 'left',
-          label: 'Getting Started',
-        },
-        {
           type: 'docSidebar',
           sidebarId: 'docs',
           position: 'left',

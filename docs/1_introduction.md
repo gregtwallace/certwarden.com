@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# Background Information
+# Introduction
 
 This project came out of my desire to resolve certificate errors
 within web services in my home lab without having to set up an ACME

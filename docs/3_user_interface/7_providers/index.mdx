@@ -1,0 +1,50 @@
+---
+sidebar_position: 7
+description: 'How to configure Challenge Solvers.'
+---
+
+# Providers (Challenge Solvers)
+
+Providers AKA Challenge Solvers are how you prove to the ACME Server that you 
+actually control the domain(s) you're requesting certificates for.
+
+There are two main methods to accomplish this. One is http-01 and the other is 
+dns-01.
+
+## Challenge Types
+
+### http-01
+
+The http-01 method works by running an http server that provides a specfic 
+reply to the ACME Server when it reaches out to the http server. The 
+http response MUST be provided by the domain name you're requesting a 
+certificate for and it must be served from internet facing port 80.
+
+This tends to prove challenging for a number of reasons so 
+most people use the dns-01 method instead. If you do want to use http-01, LeGo
+provides a built-in http server specifically for this purpose.
+
+### dns-01
+
+The dns-01 method works by provisioning a dns TXT record that the ACME Server
+checks for. Since no internet facing http service is required, this tends to 
+be the preferred method, though it does have its own risks such as usually 
+requiring API keys capable of adding and deleting dns records, which if 
+compromised could be substantially harmful.
+
+LeGo has a number of dns-01 options built-in, but the most common for users 
+is likely to be the acme.sh method as it supports the most dns providers.
+
+## Configuration
+
+You can add as many providers as you need. Each provider's configuration requires
+a list of the domains the provider should be used for. If you only have one 
+provider or if you have a provider that handles most domains, you can configure
+one wildcard provider using a single domain of `*` which directs LeGo to use
+the provider for all domains that aren't explicitly defined on another provider.
+
+The links below address each Provider Type in LeGo.
+
+import DocCardList from '@theme/DocCardList';
+
+<DocCardList />

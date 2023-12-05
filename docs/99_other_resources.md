@@ -15,3 +15,7 @@ sidebar_position: 99
 #### [Source Code - This Website](https://github.com/gregtwallace/legocerthub.com)
 
 #### [Certificate Client Example Scripts](https://github.com/gregtwallace/certificate-scripts)
+
+#### [RFC 8555](https://datatracker.ietf.org/doc/html/rfc8555)
+
+#### [Let's Encrypt](https://letsencrypt.org/)
