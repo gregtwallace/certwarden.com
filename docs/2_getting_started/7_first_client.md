@@ -50,4 +50,4 @@ Examples of **scripts** that perform these actions are available
 
 For full details and possibilities for retrieving keys and 
 certificates from LeGo please review 
-[Using Certificates](/docs/certificate_usage).
+[Using Certificates](/docs/using_certificates).
