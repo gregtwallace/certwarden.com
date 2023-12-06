@@ -5,7 +5,7 @@ description: 'Some info about the configuration file.'
 
 # Configuration File
 
-Generally, LeGo should start up fine without making any changes afer installation 
+Generally, LeGo should start up fine without making any changes after installation 
 and the default configuration is likely fine for most people. However, there is a
 config.yaml file in the application's /data folder that you may wish to review 
 and change.
