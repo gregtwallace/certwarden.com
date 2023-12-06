@@ -11,6 +11,9 @@ actually control the domain(s) you're requesting certificates for.
 There are two main methods to accomplish this. One is http-01 and the other is 
 dns-01.
 
+The `Providers` page shows all current providers. It also allows adding, 
+editing, and deleting of providers.
+
 ## Challenge Types
 
 ### http-01
@@ -23,6 +26,8 @@ certificate for and it must be served from internet facing port 80.
 This tends to prove challenging for a number of reasons so 
 most people use the dns-01 method instead. If you do want to use http-01, LeGo
 provides a built-in http server specifically for this purpose.
+
+This method does NOT support wildcards.
 
 ### dns-01
 
