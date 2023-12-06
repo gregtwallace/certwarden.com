@@ -3,7 +3,7 @@ sidebar_position: 7
 description: 'How to retrieve and use keys and certificates.'
 ---
 
-# Using Certificates
+# Using Certificates (Clients)
 
 Certificate download API calls always return the most recent 
 Valid order. This ensures the newest certificate is always 
