@@ -63,6 +63,12 @@ const config: Config = {
           position: 'left',
           label: 'Docs',
         },
+        {
+          href: 'https://forum.legocerthub.com/',
+          target: '_self',
+          label: 'Forum',
+          position: 'left',
+        },
       ],
     },
     footer: {
@@ -85,7 +91,12 @@ const config: Config = {
           title: 'Community',
           items: [
             {
-              label: 'Report a Problem',
+              label: 'Forum',
+              href: 'https://forum.legocerthub.com/',
+              target: '_self',
+            },
+            {
+              label: 'GitHub Issues',
               href: 'https://github.com/gregtwallace/legocerthub/issues',
             },
           ],
