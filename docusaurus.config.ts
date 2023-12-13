@@ -21,6 +21,10 @@ const config: Config = {
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
 
+  // ensure proper compat between sitemap & cloudflare pages; otherwise sitemap slashing
+  // is wrong and things like google search indexing don't work properly
+  trailingSlash: true,
+
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
