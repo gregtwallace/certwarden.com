@@ -93,9 +93,9 @@ regular and legacy clients is `[cert API key].[key API key]`.
 For example `certAPI123.keyAPIabc`.
 :::
 
-Returns the pem formatted key, certificate, and certificate 
-chain, all in one. `:name` should be the name of the 
-**certificate** (not the key). LeGo will deduce the proper 
+Returns the pem formatted key concatenated with the certificate. 
+The certificate chain is not included. `:name` should be the name 
+of the **certificate** (not the key). LeGo will deduce the proper 
 key from the certificate name.
 
 Legacy: Replace `*apiKey` with the API key.
