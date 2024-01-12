@@ -12,6 +12,8 @@ sidebar_position: 99
 
 #### [Source Code - Frontend](https://github.com/gregtwallace/legocerthub-frontend)
 
+#### [Source Code - Client](https://github.com/gregtwallace/legocerthub-client)
+
 #### [Source Code - This Website](https://github.com/gregtwallace/legocerthub.com)
 
 #### [Certificate Client Example Scripts](https://github.com/gregtwallace/certificate-scripts)
