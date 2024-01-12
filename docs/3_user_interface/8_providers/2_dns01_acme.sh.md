@@ -1,13 +1,13 @@
 ---
-sidebar_position: 1
-description: 'LeGo internal http challenge server.'
+sidebar_position: 2
+description: 'acme.sh is a shell script that supports dozens of dns providers.'
 ---
 
 # dns-01 acme.sh
 
 This dns method provides dns challenge solving for dozens of dns 
-providers, and is therefore most likely to be the provider used 
-if you want to use dns-01.
+providers, and is therefore one of the most likely to be the 
+provider used if you want to use dns-01.
 
 [acme.sh](https://github.com/acmesh-official/acme.sh) is an ACME shell 
 script that provides a full implementation of ACME (RFC8555). LeGo 
@@ -64,13 +64,13 @@ Each `export` is an environment variable. Specify each required
 environment variable with data pertinent to your environment. For
 example, continuing with cyon.ch, the variables would be:
 
-- `CY_Username="your_cyon_username"`
-- `CY_Password="your_cyon_password"`
-- `CY_OTP_Secret="your_otp_secret" # Only required if using 2FA`
+- `CY_Username=your_cyon_username`
+- `CY_Password=your_cyon_password`
+- `CY_OTP_Secret=your_otp_secret # Only required if using 2FA`
 
 :::tip
 The format for each environment variable must be the variable 
-name, equals sign, and the variable value (e.g. `variable_name="1234"`) 
+name, equals sign, and the variable value (e.g. `variable_name=1234`) 
 Do NOT include the word 'export'.
 :::
 
