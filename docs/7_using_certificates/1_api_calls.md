@@ -55,44 +55,44 @@ option enabled.
 
 ## GET Private Key
 
-`GET https://lego.example.com/legocerthub/api/v1/download/privatekeys/:name`
+`GET https://lego.example.com/legocerthub/api/v1/download/privatekeys/[Name]`
 
 (Header) `X-API-Key: [API Key]`
 
 or **Legacy Client**:
 
-`GET https://lego.example.com/legocerthub/api/v1/download/privatekeys/:name/*apiKey`
+`GET https://lego.example.com/legocerthub/api/v1/download/privatekeys/[Name]/[API Key]`
 
-Returns the pem formatted private key. Replace `:name` with the
+Returns the pem formatted private key. Replace `[Name]` with the
 Name of the private key in LeGo.
 
-Legacy: Replace `*apiKey` with the API key.
+Legacy: Replace `[API Key]` with the API key.
 
 ## GET Certificate
 
-`GET https://lego.example.com/legocerthub/api/v1/download/certificates/:name`
+`GET https://lego.example.com/legocerthub/api/v1/download/certificates/[Name]`
 
 (Header) `X-API-Key: [API Key]`
 
 or **Legacy Client**:
 
-`GET https://lego.example.com/legocerthub/api/v1/download/certificates/:name/*apiKey`
+`GET https://lego.example.com/legocerthub/api/v1/download/certificates/[Name]/[API Key]`
 
 Returns the pem formatted certificate, **including** its
-certificate chain. Replace `:name` with the Name of the
+certificate chain. Replace `[Name]` with the Name of the
 certificate in LeGo.
 
-Legacy: Replace `*apiKey` with the API key.
+Legacy: Replace `[API Key]` with the API key.
 
 ## GET Combined Key & Certificate (with Chain)
 
-`GET https://lego.example.com/legocerthub/api/v1/download/privatecertchains/:name`
+`GET https://lego.example.com/legocerthub/api/v1/download/privatecertchains/[Name]`
 
 (Header) `X-API-Key: [API Key]`
 
 or **Legacy Client**:
 
-`GET https://lego.example.com/legocerthub/api/v1/download/privatecertchains/:name/*apiKey`
+`GET https://lego.example.com/legocerthub/api/v1/download/privatecertchains/[Name]/[API Key]`
 
 :::info
 Since this call combines two items with different API keys, a
@@ -102,21 +102,21 @@ For example `certAPI123.keyAPIabc`.
 :::
 
 Returns the pem formatted key concatenated with the certificate and
-the certificate's chain. `:name` should be the name
+the certificate's chain. `[Name]` should be the name
 of the **certificate** (not the key). LeGo will deduce the proper
 key from the certificate name.
 
-Legacy: Replace `*apiKey` with the API key.
+Legacy: Replace `[API Key]` with the API key.
 
 ## GET Combined Key & Certificate (without Chain)
 
-`GET https://lego.example.com/legocerthub/api/v1/download/privatecerts/:name`
+`GET https://lego.example.com/legocerthub/api/v1/download/privatecerts/[Name]`
 
 (Header) `X-API-Key: [API Key]`
 
 or **Legacy Client**:
 
-`GET https://lego.example.com/legocerthub/api/v1/download/privatecerts/:name/*apiKey`
+`GET https://lego.example.com/legocerthub/api/v1/download/privatecerts/[Name]/[API Key]`
 
 :::info
 Since this call combines two items with different API keys, a
@@ -126,24 +126,24 @@ For example `certAPI123.keyAPIabc`.
 :::
 
 Returns the pem formatted key concatenated with the certificate.
-The certificate chain is not included. `:name` should be the name
+The certificate chain is not included. `[Name]` should be the name
 of the **certificate** (not the key). LeGo will deduce the proper
 key from the certificate name.
 
-Legacy: Replace `*apiKey` with the API key.
+Legacy: Replace `[API Key]` with the API key.
 
 ## GET Certificate Chain
 
-`GET https://lego.example.com/legocerthub/api/v1/download/certrootchains/:name`
+`GET https://lego.example.com/legocerthub/api/v1/download/certrootchains/[Name]`
 
 (Header) `X-API-Key: [API Key]`
 
 or **Legacy Client**:
 
-`GET https://lego.example.com/legocerthub/api/v1/download/certrootchains/:name/*apiKey`
+`GET https://lego.example.com/legocerthub/api/v1/download/certrootchains/[Name]/[API Key]`
 
 Returns the pem formatted certificate chain. It does **NOT**
-include the actual certificate though. Replace `:name` with
+include the actual certificate though. Replace `[Name]` with
 the Name of the certificate in LeGo.
 
-Legacy: Replace `*apiKey` with the API key.
+Legacy: Replace `[API Key]` with the API key.
