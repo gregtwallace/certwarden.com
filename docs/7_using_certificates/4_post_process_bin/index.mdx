@@ -1,0 +1,36 @@
+---
+sidebar_position: 4
+description: 'LeGo CertHub can run a binary after each certificate renewal.'
+---
+
+# Post Processing Script / Binary
+
+LeGo CertHub can execute a script or binary after each certificate renewal. To
+use this option, just specify the script or binary under the certificate's
+`Post Processing` options, along with any needed environment variables.
+
+LeGo CertHub automatically deduces if the specified file is a binary or script.
+
+In addition to defining static environment variables, certain dynamic 
+values are available. The placeholders below will be replaced with the 
+actual value before setting the environmnet variable.
+
+- `{{PRIVATE_KEY_NAME}}` - The name of the private key that corresponds to the new certificate.
+- `{{PRIVATE_KEY_PEM}}` - The actual PEM data of the private key.
+- `{{CERTIFICATE_NAME}}` - The name of the certificate.
+- `{{CERTIFICATE_PEM}}` - The actual PEM data of the newly issued certificate.
+- `{{CERTIFICATE_COMMON_NAME}}` - The CN of the newly issued certificate.
+
+![Certificate Page Post Processing](/img/screenshots/cert_post_process.png)
+
+## Plugins
+
+The concept behind allowing binary execution in addition to scripts is to permit 
+the creation of small binary 'plugin' files that install certificates on specific 
+devices or types of devices.
+
+I have created a few such binaries as examples:
+
+import DocCardList from '@theme/DocCardList';
+
+<DocCardList />

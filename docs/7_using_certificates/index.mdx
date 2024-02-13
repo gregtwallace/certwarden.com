@@ -5,12 +5,15 @@ description: "How to actually use certificates once they're issued."
 
 # Using Certificates
 
-Currently, the best option to use certificates once they're issued is to
-use scripting to fetch them via API calls. The API Calls are well 
-supported and you can use them however you want.
+There are 4 options to use certificates once they're issued. API Calls
+are the original option and involve a basic authenticated api call.
 
-A LeGo Client is also in the works but is only in an alpha state and
-not currently recommended for use.
+LeGo CertHub now also supports running a script or binary on the server
+as a post-processing function. This allows easy update of remote clients
+that may not be able to run a script locally (e.g. a Dell idrac, switch,
+etc.).
+
+A LeGo Client is also available as a Docker container.
 
 import DocCardList from '@theme/DocCardList';
 
