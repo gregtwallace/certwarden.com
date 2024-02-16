@@ -15,11 +15,11 @@ the shiny new certificate.
 
 Keys can be retrieved using:
 
-`GET https://legoserver.example.com/legocerthub/api/v1/download/privatekeys/:name` 
+`GET https://legoserver.example.com/legocerthub/api/v1/download/privatekeys/[Name]`
 
-The header `X-API-Key` must be set to the value of the key's 
-API key. The API key can be viewed when clicking on a key in 
-the Web UI. `:name` should be replaced with the `Name` field 
+The header `X-API-Key` must be set to the value of the key's
+API key. The API key can be viewed when clicking on a key in
+the Web UI. `[Name]` should be replaced with the `Name` field
 for the key as set in LeGo.
 
 The key is returned in pem format.
@@ -28,26 +28,24 @@ The key is returned in pem format.
 
 Certificates can be retrieved using:
 
-`GET https://legoserver.example.com/legocerthub/api/v1/download/certificates/:name`  
+`GET https://legoserver.example.com/legocerthub/api/v1/download/certificates/[Name]`
 
-The header `X-API-Key` must be set to the value of the certificate's 
-API key. The API key can be viewed when clicking on a certificate in 
-the Web UI. `:name` should be replaced with the `Name` field for the
+The header `X-API-Key` must be set to the value of the certificate's
+API key. The API key can be viewed when clicking on a certificate in
+the Web UI. `[Name]` should be replaced with the `Name` field for the
 certificate as set in LeGo.
 
 The certificate is returned in pem format.
 
-## Automation
+## Automation & Advanced Usage
 
-Clients should regularly retrieve the certificate and/or key 
-from LeGo to ensure they have the most recent versions. When 
-new versions are detected, the client should install them.
+There are a number of ways to automate the usage and update of certificates
+that LeGo CertHub issues.
 
-Examples of **scripts** that perform these actions are available 
-[here](https://github.com/gregtwallace/certificate-scripts).
+These options include writing scripts on the client devices (the
+devices that actually use the certificates), installing the LeGo Client
+docker container on the client, and having the LeGo CertHub server run
+a post processing script or binary.
 
-## Advanced Usage
-
-For full details and possibilities for retrieving keys and 
-certificates from LeGo please review 
+For many more details and possibilities related to client usage, please see
 [Using Certificates](/docs/using_certificates).
