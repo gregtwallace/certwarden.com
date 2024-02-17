@@ -11,10 +11,12 @@ function HomepageHeader() {
   return (
     <header
       className={
-        'hero row margin-vert--none padding-horiz--sm padding-vert--md'
+        'hero row margin-horiz--sm margin-vert--none padding-horiz--sm padding-vert--md'
       }
     >
-      <div className={'col col--5 padding-horiz--md ' + clsx(styles['heroBanner'])}>
+      <div
+        className={'col col--5 padding-horiz--md ' + clsx(styles['heroBanner'])}
+      >
         <Heading as='h1' className='hero__title'>
           {siteConfig.tagline}
         </Heading>
