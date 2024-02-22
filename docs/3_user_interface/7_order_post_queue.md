@@ -20,4 +20,4 @@ added it) are low priority.
 This page is a useful place to check ongoing work, without having to
 parse the log file(s).
 
-![Order Queue Page](/img/screenshots/order_queue.png)
+![Order Queue Page](/img/screenshots/order_post_queue.png)
