@@ -1,12 +1,12 @@
 ---
-sidebar_position: 6
+sidebar_position: 7
 description: 'Order Queue shows pending ACME Orders.'
 ---
 
-# Order ACME Fulfillment Queue
+# Order Post Processing Queue
 
-The Order ACME Fulfillment Queue shows the status of all orders that are 
-in the process of being fulfilled, or are awaiting fulfillment. All 
+The Order Post Processing Queue shows the status of all orders that are 
+executing post processing actions, or are awaiting post processing. All 
 workers for this work type will always be shown, even if idle.
 
 This work type is specifically LeGo working with an ACME Server to actually

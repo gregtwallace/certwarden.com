@@ -1,5 +1,5 @@
 ---
-sidebar_position: 7
+sidebar_position: 8
 description: 'Logs displays the current log file in the app and provides an option to download all logs.'
 ---
 
