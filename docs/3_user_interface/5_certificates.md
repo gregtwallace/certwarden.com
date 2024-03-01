@@ -53,6 +53,40 @@ support setting the API Key in a header (which is the 'proper' way to
 authenticate). This method is discouraged unless absolutely necessary as it 
 is generally easier to leak the API key by mistake.
 
+### CSR Fields
+
+CSR Fields allow modification of the CSR that is generated and sent to the
+ACME Server. By default, only the common name, subject alternate names, and
+public key information are sent in the CSR.
+
+ACME Servers may choose to ignore all or some of the additional or modified
+information that is provided in the CSR. Including items that the ACME Server
+chooses to discard may not result in an error. If you're using custom CSR
+settings you should confirm the resulting certificates actually match your
+expectation before deploying them into production.
+
+`Country`, `State`, `City`, `Organization`, and `Organizational Unit` are all
+self explanatory.
+
+![CSR Section, Top Half](/img/screenshots/csr_1.png)
+
+The `Extra Extensions` section allows specifying additional Extensions to
+include in the CSR.
+
+- `Description` - A human readable description that is NOT sent as part of
+  the CSR. It is only shown in LeGo as a helpful note.
+- `OID` - The dot notation form of the OID for the extension.
+- `Hex Bytes Value` - The value of the extension, encoded into a hex string.
+  As an example, the OCSP Must Staple value is `30:03:02:01:05`. The value
+  can be specified without a separator, with a `:` separator between each byte
+  or with a space separator between each byte.
+- `Critical` - If checked, specifies the extension is critical.
+
+The `Add Must Staple` button automatically adds the OCSP Must Staple extension
+with the appropriate value.
+
+![CSR Section, Bottom Half](/img/screenshots/csr_2.png)
+
 ### ACME Orders
 
 The ACME Orders section of the certificate edit screen shows the order 
