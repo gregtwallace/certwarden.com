@@ -14,7 +14,7 @@ sidebar_position: 99
 
 #### [Source Code - Client](https://github.com/gregtwallace/legocerthub-client)
 
-#### [Source Code - This Website](https://github.com/gregtwallace/legocerthub.com)
+#### [Source Code - This Website](https://github.com/gregtwallace/legocerthub.com-docusaurus/)
 
 #### [Certificate Client Example Scripts](https://github.com/gregtwallace/certificate-scripts)
 
