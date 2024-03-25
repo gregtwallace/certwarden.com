@@ -40,8 +40,8 @@ called to clean up (remove) the record after the challenge is complete.
 The paths can be relative or absolute.
 
 Scripts are called with two arguments. The first is the requested DNS
-record name (e.g. \_acme-challenge.w<span>ww</span>.example.com). The second is the
-record value (e.g. XKrxpRBosdIKFzxW_CT3KLZNf6q0HG9i01zxXp5CPBs).
+record name (e.g. `_acme-challenge.www.example.com`). The second is the
+record value (e.g. `XKrxpRBosdIKFzxW_CT3KLZNf6q0HG9i01zxXp5CPBs`).
 
 :::tip
 All LeGo releases are bundled with example scripts for reference. These
