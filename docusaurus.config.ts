@@ -1,5 +1,5 @@
-import {themes as prismThemes} from 'prism-react-renderer';
-import type {Config} from '@docusaurus/types';
+import { themes as prismThemes } from 'prism-react-renderer';
+import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
@@ -73,6 +73,12 @@ const config: Config = {
           label: 'Forum',
           position: 'left',
         },
+        {
+          to: 'docs/donate',
+          label: 'Donate',
+          position: 'left',
+          activeBaseRegex: '$^', // never show active
+        },
       ],
     },
     footer: {
@@ -108,6 +114,10 @@ const config: Config = {
         {
           title: 'More',
           items: [
+            {
+              label: 'Donate',
+              to: 'docs/donate',
+            },
             {
               label: 'Source Code',
               href: 'https://github.com/gregtwallace/legocerthub',
