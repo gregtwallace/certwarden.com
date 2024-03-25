@@ -34,11 +34,4 @@ acme-dns configuration involves creating a resource for each domain
 you intend to validate. You must input information about every 
 resource you want LeGo to use.
 
-:::tip
-The format for each environment variable must be the variable
-name, equals sign, and the variable value (e.g. `variable_name=1234`)
-Do NOT include the word 'export'.
-Do NOT include quotes around the variable value.
-:::
-
 ![ACME DNS Config](/img/screenshots/provider_acme_dns.png)
