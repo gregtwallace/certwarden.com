@@ -53,7 +53,6 @@ Variable Name`s and add the ones you need.
 The format for each environment variable must be the variable
 name, equals sign, and the variable value (e.g. `variable_name=1234`)
 Do NOT include the word 'export'.
-Do NOT include quotes around the variable value.
 :::
 
 ![Environment Variables Example](/img/screenshots/provider_environment_variables.png)
