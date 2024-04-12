@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-description: 'Login screen for LeGo.'
+description: 'Login screen for Cert Warden.'
 ---
 
 # Login

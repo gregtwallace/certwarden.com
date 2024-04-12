@@ -3,12 +3,12 @@ import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
-  title: 'LeGo CertHub',
+  title: 'Cert Warden (formerly LeGo CertHub)',
   tagline: 'Centralized ACME Certificate Management',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://www.legocerthub.com',
+  url: 'https://www.certwarden.com',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
@@ -16,7 +16,7 @@ const config: Config = {
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'gregtwallace', // Usually your GitHub org/user name.
-  projectName: 'legocerthub.com', // Usually your repo name.
+  projectName: 'certwarden.com', // Usually your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -53,12 +53,12 @@ const config: Config = {
 
   themeConfig: {
     // Replace with your project's social card
-    image: 'img/legocerthub_social_card.jpg',
+    image: 'img/certwarden_social_card.jpg',
     navbar: {
-      title: 'LeGo CertHub',
+      title: 'Cert Warden',
       logo: {
-        alt: 'LeGo CertHub Logo',
-        src: 'img/legocerthub_icon_rounded.png',
+        alt: 'Cert Warden Logo',
+        src: 'img/certwarden_icon_rounded.png',
       },
       items: [
         {
@@ -68,7 +68,7 @@ const config: Config = {
           label: 'Docs',
         },
         {
-          href: 'https://forum.legocerthub.com/',
+          href: 'https://forum.certwarden.com/',
           target: '_self',
           label: 'Forum',
           position: 'left',
@@ -102,12 +102,12 @@ const config: Config = {
           items: [
             {
               label: 'Forum',
-              href: 'https://forum.legocerthub.com/',
+              href: 'https://forum.certwarden.com/',
               target: '_self',
             },
             {
               label: 'GitHub Issues',
-              href: 'https://github.com/gregtwallace/legocerthub/issues',
+              href: 'https://github.com/gregtwallace/certwarden/issues',
             },
           ],
         },
@@ -120,7 +120,7 @@ const config: Config = {
             },
             {
               label: 'Source Code',
-              href: 'https://github.com/gregtwallace/legocerthub',
+              href: 'https://github.com/gregtwallace/certwarden',
             },
             {
               label: 'Greg T. Wallace',

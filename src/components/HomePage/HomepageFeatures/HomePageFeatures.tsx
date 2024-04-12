@@ -24,8 +24,8 @@ const FeatureList: FeatureItem[] = [
     Svg: require('@site/static/img/features/server_with_clients.svg').default,
     description: (
       <>
-        Individual consumers of keys and certificates retrieve them from LeGo
-        CertHub via a straighforward API call using a scoped API key. Keys can
+        Individual consumers of keys and certificates retrieve them from Cert Warden
+        via a straighforward API call using a scoped API key. Keys can
         be easily rotated for added security or in case of compromise.
       </>
     ),
@@ -35,7 +35,7 @@ const FeatureList: FeatureItem[] = [
     Svg: require('@site/static/img/features/wrench_and_gear.svg').default,
     description: (
       <>
-        Once you've configured LeGo CertHub it handles certificate renewals
+        Once you've configured Cert Warden it handles certificate renewals
         completely autonomously.
       </>
     ),
@@ -45,7 +45,7 @@ const FeatureList: FeatureItem[] = [
     Svg: require('@site/static/img/features/person_with_choices.svg').default,
     description: (
       <>
-        LeGo CertHub is fully compliant with RFC 8555 which means it will work
+        Cert Warden is fully compliant with RFC 8555 which means it will work
         with any compliant ACME provider you choose.
       </>
     ),
@@ -55,7 +55,7 @@ const FeatureList: FeatureItem[] = [
     Svg: require('@site/static/img/features/checked_off_list.svg').default,
     description: (
       <>
-        LeGo CertHub has a built in http server for http-01 challenges and
+        Cert Warden has a built in http server for http-01 challenges and
         supports dozens of DNS providers for dns-01 challenges.
       </>
     ),

@@ -10,17 +10,17 @@ server that allows limited access to your DNS provider to update ACME
 DNS records. This allows minimization of the attack surface in the
 event of a compromise.
 
-Setup of acme-dns is outside of the scope of this document and LeGo
+Setup of acme-dns is outside of the scope of this document and Cert Warden
 support in general.
 
 ## Configuration
 
 Once you configure acme-dns, you can add the acme-dns server as a
-provider in LeGo.
+provider in Cert Warden.
 
 As with all providers, domains that should use this provider must be
 specified. One wildcard provider can be configured with a sole
-domain of `*` which will be used if LeGo doesn't find a domain
+domain of `*` which will be used if Cert Warden doesn't find a domain
 name on any other provider.
 
 ### ACME DNS Server Address
@@ -32,6 +32,6 @@ https://myacmedns.example.com:8880).
 
 acme-dns configuration involves creating a resource for each domain
 you intend to validate. You must input information about every 
-resource you want LeGo to use.
+resource you want Cert Warden to use.
 
 ![ACME DNS Config](/img/screenshots/provider_acme_dns.png)

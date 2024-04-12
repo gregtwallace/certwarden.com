@@ -5,7 +5,7 @@ description: 'For unsupported dns providers, a script option is available.'
 
 # dns-01 Manual Script
 
-LeGo provides access to dozens of DNS providers via integration of acme.sh
+Cert Warden provides access to dozens of DNS providers via integration of acme.sh
 and go-acme/le-go. However, it isn't possible to support every single
 provider.
 
@@ -13,16 +13,14 @@ provider.
 
 As with all providers, domains that should use this provider must be
 specified. One wildcard provider can be configured with a sole
-domain of `*` which will be used if LeGo doesn't find a domain
+domain of `*` which will be used if Cert Warden doesn't find a domain
 name on any other provider.
 
 ### Environment Variables
 
 Environment variables are generally used to authenticate access
-to your dns provider. To know what variables you need, again go
-[here](https://go-acme.github.io/lego/dns/),
-select your provider, but then review the tables listing `Environment
-Variable Name`s and add the ones you need.
+to your dns provider. The variables you need will be dependent
+on the script.
 
 :::tip
 The format for each environment variable must be the variable
@@ -44,7 +42,7 @@ record name (e.g. `_acme-challenge.www.example.com`). The second is the
 record value (e.g. `XKrxpRBosdIKFzxW_CT3KLZNf6q0HG9i01zxXp5CPBs`).
 
 :::tip
-All LeGo releases are bundled with example scripts for reference. These
+All Cert Warden releases are bundled with example scripts for reference. These
 scripts log the arguments and environment variables so you can see how this
 process works before writing your own script.
 :::

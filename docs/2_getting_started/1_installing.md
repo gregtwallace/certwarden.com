@@ -11,8 +11,8 @@ and some other miscellaneous files.
 ## Docker
 
 The simplest way to install is to pull the Docker image. The image is available at
-[Docker Hub](https://github.com/gregtwallace/legocerthub/releases) and
-[GitHub Packages](https://github.com/gregtwallace/legocerthub/releases).
+[Docker Hub](https://github.com/gregtwallace/certwarden/releases) and
+[GitHub Packages](https://github.com/gregtwallace/certwarden/releases).
 
 The Docker image requires a persistent data volume for the `/app/data` path.
 Depending on the feature set you want to run, the following ports must be exposed:
@@ -24,12 +24,12 @@ Depending on the feature set you want to run, the following ports must be expose
 - `4070/tcp` pprof Debugging (HTTPS)
 
 You can also check out the most recent
-[docker-compose.yml](https://github.com/gregtwallace/legocerthub/blob/master/docker-compose.yml) file.
+[docker-compose.yml](https://github.com/gregtwallace/certwarden/blob/master/docker-compose.yml) file.
 
 ## Direct Install
 
 For direct installation on Windows or Linux, download the binary release package
-from [GitHub](https://github.com/gregtwallace/legocerthub/releases) and unpack it.
+from [GitHub](https://github.com/gregtwallace/certwarden/releases) and unpack it.
 
 For convenience, the scripts/ path has an install.sh script that will install the
 application and add a service to systemd that will run the application.

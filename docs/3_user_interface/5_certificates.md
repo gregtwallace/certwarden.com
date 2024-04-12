@@ -6,8 +6,8 @@ description: 'Certificates contains functionality to add, edit, and delete certi
 # Certificates
 
 The Certificates section provides management of certificates. Certificates contain
-individual ACME orders grouped together. When a client retrieves a certificate, LeGo 
-CertHub is designed to return the most recent valid order associated with that
+individual ACME orders grouped together. When a client retrieves a certificate, Cert Warden 
+is designed to return the most recent valid order associated with that
 certificate.
 
 ## View All
@@ -33,9 +33,9 @@ name as the certificate.
 
 ![New Certificate Page](/img/screenshots/certificates_new.png)
 
-The `Post Processing` contains actions the LeGo server can perform after
+The `Post Processing` contains actions the Cert Warden server can perform after
 each issuance or renewal of a certificate. More information on these options
-can be found under [LeGo Client](/docs/using_certificates/lego_client/) and 
+can be found under [Cert Warden Client](/docs/using_certificates/client/) and 
 [Post Processing Script / Binary](/docs/using_certificates/post_process_bin/).
 
 `CSR Fields` contains other fields that can be customized for the CSR that
@@ -74,7 +74,7 @@ The `Extra Extensions` section allows specifying additional Extensions to
 include in the CSR.
 
 - `Description` - A human readable description that is NOT sent as part of
-  the CSR. It is only shown in LeGo as a helpful note.
+  the CSR. It is only shown in Cert Warden as a helpful note.
 - `OID` - The dot notation form of the OID for the extension.
 - `Hex Bytes Value` - The value of the extension, encoded into a hex string.
   As an example, the OCSP Must Staple value is `30:03:02:01:05`. The value

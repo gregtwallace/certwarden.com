@@ -10,16 +10,16 @@ providers, and is therefore one of the most likely to be the
 provider used if you want to use dns-01.
 
 [go-acme le-go](https://github.com/go-acme/lego) is a Go library
-that provides a full implementation of ACME (RFC8555). LeGo ignores
+that provides a full implementation of ACME (RFC8555). Cert Warden ignores
 the bulk of the code and leverages go-acme le-go simply for its wide
 breadth of dns provider support.
 
 go-acme le-go natively supports the DNS record API of
 [dozens of DNS providers](https://go-acme.github.io/lego/dns/).
-LeGo leverages this power to use go-acme le-go to create dns records on any
+Cert Warden leverages this power to use go-acme le-go to create dns records on any
 of the supported providers. Doing this allows the use of dns-01
 challenge solving on any of these providers without having to code
-support of each into LeGo.
+support of each into Cert Warden.
 
 :::warning
 go-acme le-go will make dns queries to a wide variety of dns servers
@@ -32,7 +32,7 @@ tampered with on your network.
 
 As with all providers, domains that should use this provider must be
 specified. One wildcard provider can be configured with a sole
-domain of `*` which will be used if LeGo doesn't find a domain
+domain of `*` which will be used if Cert Warden doesn't find a domain
 name on any other provider.
 
 ### Provider's CLI flag name (aka Code)

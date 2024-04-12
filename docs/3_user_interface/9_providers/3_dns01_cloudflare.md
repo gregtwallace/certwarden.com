@@ -1,11 +1,11 @@
 ---
 sidebar_position: 3
-description: "This is LeGo's native integration with Cloudflare as a dns provider."
+description: "This is Cert Warden's native integration with Cloudflare as a dns provider."
 ---
 
 # dns-01 Cloudflare
 
-LeGo has native support for Cloudflare as a DNS provider.
+Cert Warden has native support for Cloudflare as a DNS provider.
 
 There are two options to configure Cloudflare. You can either create 
 a scoped API Token or use a Global API Key.
@@ -14,7 +14,7 @@ a scoped API Token or use a Global API Key.
 
 As with all providers, domains that should use this provider must be 
 specified. One wildcard provider can be configured with a sole 
-domain of `*` which will be used if LeGo doesn't find a domain 
+domain of `*` which will be used if Cert Warden doesn't find a domain 
 name on any other provider.
 
 Then use the dropdown box to select one of the two below options.
@@ -23,7 +23,7 @@ Then use the dropdown box to select one of the two below options.
 
 This is the preferred option as compromise of the token will only result in 
 a partial compromise of the related account. Additionally, there is no reason
-to give LeGo complete access to a Cloudflare account.
+to give Cert Warden complete access to a Cloudflare account.
 
 [How To Make a Token](https://developers.cloudflare.com/fundamentals/api/get-started/create-token/)
 

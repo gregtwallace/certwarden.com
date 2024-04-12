@@ -9,7 +9,7 @@ The Order ACME Fulfillment Queue shows the status of all orders that are
 in the process of being fulfilled, or are awaiting fulfillment. All 
 workers for this work type will always be shown, even if idle.
 
-This work type is specifically LeGo working with an ACME Server to actually
+This work type is specifically Cert Warden working with an ACME Server to actually
 get a certificate issued.
 
 Waiting jobs will be worked according to their priority. Manually placed 

@@ -1,6 +1,6 @@
 ---
 sidebar_position: 2
-description: 'Dashboard that provides an over view of all active LeGo certificates.'
+description: 'Dashboard that provides an over view of all active Cert Warden certificates.'
 ---
 
 # Dashboard
@@ -8,7 +8,7 @@ description: 'Dashboard that provides an over view of all active LeGo certificat
 The dashboard shows all current, valid certificates, what their primary subject 
 is, any special flags, and their expiration.
 
-Essentially this is a good high level overview of the certificates LeGo is 
+Essentially this is a good high level overview of the certificates Cert Warden is 
 providing.
 
 Clicking on a certificate name will take you to that certificate's page.

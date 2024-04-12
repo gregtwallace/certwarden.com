@@ -11,15 +11,15 @@ available without having to change the API call.
 
 To use a certificate the server must have both the private key and
 certificate. There are currently 5 API calls that can be sent to
-LeGo to retrieve these items in various combinations.
+Cert Warden to retrieve these items in various combinations.
 
 Currently all of these are returned in PEM format but this may
 change in the future.
 
 ### Automation & Scripting
 
-LeGo is intended to automate your PKI using ACME. Clients should
-regularly retrieve their certificates and keys from LeGo to ensure
+Cert Warden is intended to automate your PKI using ACME. Clients should
+regularly retrieve their certificates and keys from Cert Warden to ensure
 they have the most recent versions. When new versions are
 detected, the client should install them.
 
@@ -31,7 +31,7 @@ good starting point.
 
 :::tip
 Ensure you thoroughly test your scripts. Try things like running
-your scripts with the wrong API keys, while the LeGo server is
+your scripts with the wrong API keys, while the Cert Warden server is
 down, etc. A poortly written script running during an unexpected
 condition could potentially take the service using the certificate
 down or worse.
@@ -55,44 +55,44 @@ option enabled.
 
 ## GET Private Key
 
-`GET https://lego.example.com/legocerthub/api/v1/download/privatekeys/[Name]`
+`GET https://certwarden.example.com/legocerthub/api/v1/download/privatekeys/[Name]`
 
 (Header) `X-API-Key: [API Key]`
 
 or **Legacy Client**:
 
-`GET https://lego.example.com/legocerthub/api/v1/download/privatekeys/[Name]/[API Key]`
+`GET https://certwarden.example.com/legocerthub/api/v1/download/privatekeys/[Name]/[API Key]`
 
 Returns the pem formatted private key. Replace `[Name]` with the
-Name of the private key in LeGo.
+Name of the private key in Cert Warden.
 
 Legacy: Replace `[API Key]` with the API key.
 
 ## GET Certificate
 
-`GET https://lego.example.com/legocerthub/api/v1/download/certificates/[Name]`
+`GET https://certwarden.example.com/legocerthub/api/v1/download/certificates/[Name]`
 
 (Header) `X-API-Key: [API Key]`
 
 or **Legacy Client**:
 
-`GET https://lego.example.com/legocerthub/api/v1/download/certificates/[Name]/[API Key]`
+`GET https://certwarden.example.com/legocerthub/api/v1/download/certificates/[Name]/[API Key]`
 
 Returns the pem formatted certificate, **including** its
 certificate chain. Replace `[Name]` with the Name of the
-certificate in LeGo.
+certificate in Cert Warden.
 
 Legacy: Replace `[API Key]` with the API key.
 
 ## GET Combined Key & Certificate (with Chain)
 
-`GET https://lego.example.com/legocerthub/api/v1/download/privatecertchains/[Name]`
+`GET https://certwarden.example.com/legocerthub/api/v1/download/privatecertchains/[Name]`
 
 (Header) `X-API-Key: [API Key]`
 
 or **Legacy Client**:
 
-`GET https://lego.example.com/legocerthub/api/v1/download/privatecertchains/[Name]/[API Key]`
+`GET https://certwarden.example.com/legocerthub/api/v1/download/privatecertchains/[Name]/[API Key]`
 
 :::info
 Since this call combines two items with different API keys, a
@@ -103,20 +103,20 @@ For example `certAPI123.keyAPIabc`.
 
 Returns the pem formatted key concatenated with the certificate and
 the certificate's chain. `[Name]` should be the name
-of the **certificate** (not the key). LeGo will deduce the proper
+of the **certificate** (not the key). Cert Warden will deduce the proper
 key from the certificate name.
 
 Legacy: Replace `[API Key]` with the API key.
 
 ## GET Combined Key & Certificate (without Chain)
 
-`GET https://lego.example.com/legocerthub/api/v1/download/privatecerts/[Name]`
+`GET https://certwarden.example.com/legocerthub/api/v1/download/privatecerts/[Name]`
 
 (Header) `X-API-Key: [API Key]`
 
 or **Legacy Client**:
 
-`GET https://lego.example.com/legocerthub/api/v1/download/privatecerts/[Name]/[API Key]`
+`GET https://certwarden.example.com/legocerthub/api/v1/download/privatecerts/[Name]/[API Key]`
 
 :::info
 Since this call combines two items with different API keys, a
@@ -127,23 +127,23 @@ For example `certAPI123.keyAPIabc`.
 
 Returns the pem formatted key concatenated with the certificate.
 The certificate chain is not included. `[Name]` should be the name
-of the **certificate** (not the key). LeGo will deduce the proper
+of the **certificate** (not the key). Cert Warden will deduce the proper
 key from the certificate name.
 
 Legacy: Replace `[API Key]` with the API key.
 
 ## GET Certificate Chain
 
-`GET https://lego.example.com/legocerthub/api/v1/download/certrootchains/[Name]`
+`GET https://certwarden.example.com/legocerthub/api/v1/download/certrootchains/[Name]`
 
 (Header) `X-API-Key: [API Key]`
 
 or **Legacy Client**:
 
-`GET https://lego.example.com/legocerthub/api/v1/download/certrootchains/[Name]/[API Key]`
+`GET https://certwarden.example.com/legocerthub/api/v1/download/certrootchains/[Name]/[API Key]`
 
 Returns the pem formatted certificate chain. It does **NOT**
 include the actual certificate though. Replace `[Name]` with
-the Name of the certificate in LeGo.
+the Name of the certificate in Cert Warden.
 
 Legacy: Replace `[API Key]` with the API key.

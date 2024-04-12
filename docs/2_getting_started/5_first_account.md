@@ -5,7 +5,7 @@ description: 'Creating the first ACME Account.'
 
 # First ACME Account
 
-Now that everything is configured, its time to start using LeGo. If an 
+Now that everything is configured, its time to start using Cert Warden. If an 
 error is encountered during any of these steps, navigate to `Logs` and 
 review the most recent logs (at the top) to find out what went wrong.
 

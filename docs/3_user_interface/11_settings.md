@@ -38,7 +38,7 @@ Existing backups can also be deleted.
 
 Restore functionality is not yet implemented.
 
-## Shutdown LeGo
+## Shutdown Cert Warden
 
 This widget allows for programatic triggering of a shutdown or 
 restart of the application.

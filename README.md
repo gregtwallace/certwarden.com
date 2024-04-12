@@ -1,7 +1,8 @@
-# LeGo Certhub Website
+# Cert Warden Website
 Centralized ACME Certificate Management
 Your entire PKI at your fingertips.
 
 ## Website Source
-This is the sourcecode for the LeGo CertHub website:
-https://www.legocerthub.com/
+This is the sourcecode for the Cert Warden (formerly 
+LeGo CertHub) website:
+https://www.certwarden.com/

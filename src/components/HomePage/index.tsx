@@ -35,7 +35,7 @@ export default function HomePage(): JSX.Element {
   return (
     <Layout
       title={`Home`}
-      description='LeGo CertHub - Centralized ACME Certificate Management'
+      description='Cert Warden - Centralized ACME Certificate Management'
     >
       <HomepageHeader />
 

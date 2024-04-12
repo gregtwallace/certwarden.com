@@ -49,12 +49,12 @@ Once things are working, repeat this process with the production
 account for all of the certificates you want. Use this same process 
 for future certificates.
 
-After an Order becomes Valid, LeGo will automatically place future 
+After an Order becomes Valid, Cert Warden will automatically place future 
 orders ~40 days before expiration to keep the certificate fresh.
 
 :::tip
 The first production certificate you should issue should be for your 
-LeGo server to secure it. If you did not edit `config.yaml` LeGo will 
+Cert Warden server to secure it. If you did not edit `config.yaml` Cert Warden will 
 run in https mode using the certificate name `legocerthub` so use that
 as the name of this production certificate.
 

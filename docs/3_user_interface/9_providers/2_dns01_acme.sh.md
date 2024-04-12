@@ -10,7 +10,7 @@ providers, and is therefore one of the most likely to be the
 provider used if you want to use dns-01.
 
 [acme.sh](https://github.com/acmesh-official/acme.sh) is an ACME shell 
-script that provides a full implementation of ACME (RFC8555). LeGo 
+script that provides a full implementation of ACME (RFC8555). Cert Warden 
 ignores the bulk of the code and leverages acme.sh simply for its wide 
 breadth of dns provider support.
 
@@ -21,16 +21,16 @@ of supported OSes is [here](https://github.com/acmesh-official/acme.sh#tested-os
 
 acme.sh natively supports the DNS record API of 
 [dozens of DNS providers](https://github.com/acmesh-official/acme.sh/wiki/dnsapi). 
-LeGo leverages this power to use acme.sh to create dns records on any 
+Cert Warden leverages this power to use acme.sh to create dns records on any 
 of the supported providers. Doing this allows the use of dns-01 
 challenge solving on any of these providers without having to code 
-support of each into LeGo.
+support of each into Cert Warden.
 
 ## Configuration
 
 As with all providers, domains that should use this provider must be 
 specified. One wildcard provider can be configured with a sole 
-domain of `*` which will be used if LeGo doesn't find a domain 
+domain of `*` which will be used if Cert Warden doesn't find a domain 
 name on any other provider.
 
 ### Path to acme.sh Install
