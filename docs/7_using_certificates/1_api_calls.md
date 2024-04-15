@@ -55,13 +55,13 @@ option enabled.
 
 ## GET Private Key
 
-`GET https://certwarden.example.com/legocerthub/api/v1/download/privatekeys/[Name]`
+`GET https://certwarden.example.com/certwarden/api/v1/download/privatekeys/[Name]`
 
 (Header) `X-API-Key: [API Key]`
 
 or **Legacy Client**:
 
-`GET https://certwarden.example.com/legocerthub/api/v1/download/privatekeys/[Name]/[API Key]`
+`GET https://certwarden.example.com/certwarden/api/v1/download/privatekeys/[Name]/[API Key]`
 
 Returns the pem formatted private key. Replace `[Name]` with the
 Name of the private key in Cert Warden.
@@ -70,13 +70,13 @@ Legacy: Replace `[API Key]` with the API key.
 
 ## GET Certificate
 
-`GET https://certwarden.example.com/legocerthub/api/v1/download/certificates/[Name]`
+`GET https://certwarden.example.com/certwarden/api/v1/download/certificates/[Name]`
 
 (Header) `X-API-Key: [API Key]`
 
 or **Legacy Client**:
 
-`GET https://certwarden.example.com/legocerthub/api/v1/download/certificates/[Name]/[API Key]`
+`GET https://certwarden.example.com/certwarden/api/v1/download/certificates/[Name]/[API Key]`
 
 Returns the pem formatted certificate, **including** its
 certificate chain. Replace `[Name]` with the Name of the
@@ -86,13 +86,13 @@ Legacy: Replace `[API Key]` with the API key.
 
 ## GET Combined Key & Certificate (with Chain)
 
-`GET https://certwarden.example.com/legocerthub/api/v1/download/privatecertchains/[Name]`
+`GET https://certwarden.example.com/certwarden/api/v1/download/privatecertchains/[Name]`
 
 (Header) `X-API-Key: [API Key]`
 
 or **Legacy Client**:
 
-`GET https://certwarden.example.com/legocerthub/api/v1/download/privatecertchains/[Name]/[API Key]`
+`GET https://certwarden.example.com/certwarden/api/v1/download/privatecertchains/[Name]/[API Key]`
 
 :::info
 Since this call combines two items with different API keys, a
@@ -110,13 +110,13 @@ Legacy: Replace `[API Key]` with the API key.
 
 ## GET Combined Key & Certificate (without Chain)
 
-`GET https://certwarden.example.com/legocerthub/api/v1/download/privatecerts/[Name]`
+`GET https://certwarden.example.com/certwarden/api/v1/download/privatecerts/[Name]`
 
 (Header) `X-API-Key: [API Key]`
 
 or **Legacy Client**:
 
-`GET https://certwarden.example.com/legocerthub/api/v1/download/privatecerts/[Name]/[API Key]`
+`GET https://certwarden.example.com/certwarden/api/v1/download/privatecerts/[Name]/[API Key]`
 
 :::info
 Since this call combines two items with different API keys, a
@@ -134,13 +134,13 @@ Legacy: Replace `[API Key]` with the API key.
 
 ## GET Certificate Chain
 
-`GET https://certwarden.example.com/legocerthub/api/v1/download/certrootchains/[Name]`
+`GET https://certwarden.example.com/certwarden/api/v1/download/certrootchains/[Name]`
 
 (Header) `X-API-Key: [API Key]`
 
 or **Legacy Client**:
 
-`GET https://certwarden.example.com/legocerthub/api/v1/download/certrootchains/[Name]/[API Key]`
+`GET https://certwarden.example.com/certwarden/api/v1/download/certrootchains/[Name]/[API Key]`
 
 Returns the pem formatted certificate chain. It does **NOT**
 include the actual certificate though. Replace `[Name]` with

@@ -29,18 +29,18 @@ paste into the client configuration.
 /usr/bin/docker run --name certwardenclient \
   -p 5055:5055 \
   -v /var/run/docker.sock:/var/run/docker.sock \
-  -v /persist/certwardenclient/certs:/opt/lego/certs \
+  -v /persist/certwardenclient/certs:/opt/certwarden/certs \
   -e TZ=America/New_York \
-  -e LEGO_CERTHUB_CLIENT_FILE_UPDATE_TIME_START='04:30' \
-  -e LEGO_CERTHUB_CLIENT_FILE_UPDATE_TIME_END='05:45' \
-  -e LEGO_CERTHUB_CLIENT_FILE_UPDATE_DAYS_OF_WEEK='Mon Wed Thu' \
-  -e LEGO_CERTHUB_CLIENT_RESTART_DOCKER_CONTAINER0='cert_using_app' \
-  -e LEGO_CERTHUB_CLIENT_AES_KEY_BASE64='[the key Cert Warden CertHub generated]' \
-  -e LEGO_CERTHUB_CLIENT_SERVER_ADDRESS='https://certwarden.example.com' \
-  -e LEGO_CERTHUB_CLIENT_KEY_NAME='app.example.com' \
-  -e LEGO_CERTHUB_CLIENT_KEY_APIKEY='abcd1234' \
-  -e LEGO_CERTHUB_CLIENT_CERT_NAME='app.example.com' \
-  -e LEGO_CERTHUB_CLIENT_CERT_APIKEY='1234abcd' \
+  -e CW_CLIENT_FILE_UPDATE_TIME_START='04:30' \
+  -e CW_CLIENT_FILE_UPDATE_TIME_END='05:45' \
+  -e CW_CLIENT_FILE_UPDATE_DAYS_OF_WEEK='Mon Wed Thu' \
+  -e CW_CLIENT_RESTART_DOCKER_CONTAINER0='cert_using_app' \
+  -e CW_CLIENT_AES_KEY_BASE64='[the key Cert Warden CertHub generated]' \
+  -e CW_CLIENT_SERVER_ADDRESS='https://certwarden.example.com' \
+  -e CW_CLIENT_KEY_NAME='app.example.com' \
+  -e CW_CLIENT_KEY_APIKEY='abcd1234' \
+  -e CW_CLIENT_CERT_NAME='app.example.com' \
+  -e CW_CLIENT_CERT_APIKEY='1234abcd' \
   ghcr.io/gregtwallace/certwarden-client:latest
 ```
 
@@ -60,12 +60,12 @@ you understand these risks.
 :::
 
 Only these environment variables are mandatory:
-- `LEGO_CERTHUB_CLIENT_SERVER_ADDRESS` - DNS name of the Cert Warden server. Must start with 
+- `CW_CLIENT_SERVER_ADDRESS` - DNS name of the Cert Warden server. Must start with 
   https and have a valids ssl certificate.
-- `LEGO_CERTHUB_CLIENT_KEY_NAME` - Name of the private key in Cert Warden server.
-- `LEGO_CERTHUB_CLIENT_KEY_APIKEY` - API Key of private key in Cert Warden server.
-- `LEGO_CERTHUB_CLIENT_CERT_NAME` - Name of certificate in Cert Warden server.
-- `LEGO_CERTHUB_CLIENT_CERT_APIKEY` - API Key of certificate in Cert Warden server.
+- `CW_CLIENT_KEY_NAME` - Name of the private key in Cert Warden server.
+- `CW_CLIENT_KEY_APIKEY` - API Key of private key in Cert Warden server.
+- `CW_CLIENT_CERT_NAME` - Name of certificate in Cert Warden server.
+- `CW_CLIENT_CERT_APIKEY` - API Key of certificate in Cert Warden server.
 
 Additional environment variables can be viewed at:
 [https://github.com/gregtwallace/certwarden-client/blob/main/pkg/main/config.go](https://github.com/gregtwallace/certwarden-client/blob/main/pkg/main/config.go)

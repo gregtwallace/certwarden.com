@@ -6,7 +6,7 @@ sidebar_position: 2
 
 Using a reverse proxy is not officially supported but the following config 
 for NGINX should work if you're hosting Cert Warden on a subdomain. If you're not 
-using a subdomain, change the location from `/` to `/legocerthub`.
+using a subdomain, change the location from `/` to `/certwarden`.
 
 The first item `proxy_pass` should be the protocol, name or ip of your Cert Warden 
 server, and the corresponding port number.

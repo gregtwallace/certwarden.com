@@ -7,5 +7,5 @@
 /configure /docs/getting_started/configuration_file 301
 /install /docs/getting_started/installing/ 301
 
-# Redirect from old LeGo Client
+# Redirect from old Client
 /docs/using_certificates/lego_client/ /docs/using_certificates/client/ 301

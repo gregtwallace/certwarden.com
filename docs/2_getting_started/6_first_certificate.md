@@ -55,7 +55,7 @@ orders ~40 days before expiration to keep the certificate fresh.
 :::tip
 The first production certificate you should issue should be for your 
 Cert Warden server to secure it. If you did not edit `config.yaml` Cert Warden will 
-run in https mode using the certificate name `legocerthub` so use that
+run in https mode using the certificate name `serverdefault` so use that
 as the name of this production certificate.
 
 Once the certificate's order is `Valid`, navigate to `Settings` and 

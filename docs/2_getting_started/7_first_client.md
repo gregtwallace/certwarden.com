@@ -15,7 +15,7 @@ the shiny new certificate.
 
 Keys can be retrieved using:
 
-`GET https://certwarden.example.com/legocerthub/api/v1/download/privatekeys/[Name]`
+`GET https://certwarden.example.com/certwarden/api/v1/download/privatekeys/[Name]`
 
 The header `X-API-Key` must be set to the value of the key's
 API key. The API key can be viewed when clicking on a key in
@@ -28,7 +28,7 @@ The key is returned in pem format.
 
 Certificates can be retrieved using:
 
-`GET https://certwarden.example.com/legocerthub/api/v1/download/certificates/[Name]`
+`GET https://certwarden.example.com/certwarden/api/v1/download/certificates/[Name]`
 
 The header `X-API-Key` must be set to the value of the certificate's
 API key. The API key can be viewed when clicking on a certificate in
