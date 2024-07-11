@@ -65,10 +65,21 @@ chooses to discard may not result in an error. If you're using custom CSR
 settings you should confirm the resulting certificates actually match your
 expectation before deploying them into production.
 
+`Preferred Root Cert's Common Name` is not technically something that is a
+part of the CSR but it impacts the certificate chain that Cert Warden 
+downloads, so I included the option here. This field behaves the same way 
+Certbot's `--preferred-chain` option does. That is, you can specify the 
+Common Name of the root certificate you want. As an example, Let's Encrypt 
+offers a shorter intermediate certificate for EC keys but does not default 
+to it as to maximize compatibility. If you want this shorter chain, you 
+would set `ISRG Root X2` in this field. In the event the specified root CN
+is not returned by the ACME server, Cert Warden will download the default
+certificate (instead of failing) and log a Warn message.
+
 `Country`, `State`, `City`, `Organization`, and `Organizational Unit` are all
 self explanatory.
 
-![CSR Section, Top Half](/img/screenshots/csr_1.png)
+![CSR Section, Top Half](/img/screenshots/certificates_csr_1.png)
 
 The `Extra Extensions` section allows specifying additional Extensions to
 include in the CSR.
@@ -85,20 +96,36 @@ include in the CSR.
 The `Add Must Staple` button automatically adds the OCSP Must Staple extension
 with the appropriate value.
 
-![CSR Section, Bottom Half](/img/screenshots/csr_2.png)
+![CSR Section, Bottom Half](/img/screenshots/certificates_csr_2.png)
 
 ### ACME Orders
 
 The ACME Orders section of the certificate edit screen shows the order 
-history for the specific certificate, as well as details about those orders.
+history for the specific certificate, as well as information about those orders.
 
 After the intitial certificate is created, you must manually click the 
 `Place New Order` button to request the initial certificate. Once the initial
 order is created and valid, future orders will automatically be placed in
 accord with the expiration threshold that is configured.
 
-You can view the DNS Names for a given order, the key tied to it, and there
-are several action options:
+#### Details
+
+- `List Icon` - Hovering over the list icon will show the DNS identifiers 
+  associated with that specific order.
+- `Key Icon` - Once an order is finalized, the key icon will appear. Hovering
+  will show the key name that was used to finalize that order. Clicking the key
+  icon will take you to that key's edit key page.
+- `Link Icon` - Once a certificate has been finalized and downloaded by Cert
+  Warden the link icon will appear. Hovering over the link icon shows the 
+  Common Name of the root certificate for the order.
+:::tip
+  The data underlying the `Link Icon` was not always available in Cert Warden.
+  Orders that were downloaded prior to Cert Warden version 0.22.0 will NOT have
+  the key icon. This is normal and will not negatively impact performance, you
+  just won't be able to easily see the root CN.
+:::
+
+#### Actions
 
 - `Download` - Only available on `Valid` orders.
 - `Revoke` - Only available on `Valid` orders.

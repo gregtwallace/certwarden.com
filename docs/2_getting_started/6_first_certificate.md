@@ -43,7 +43,7 @@ likely cause is an improperly configured Provider (Challenge Solver).
 Make changes as appropriate and click `Place New Order` and wait for 
 the result. Repeat this process until the Order result is `Valid`.
 
-![Valid Order](/img/screenshots/order_valid.png)
+![Valid Order](/img/screenshots/orders_valid.png)
 
 Once things are working, repeat this process with the production 
 account for all of the certificates you want. Use this same process 
