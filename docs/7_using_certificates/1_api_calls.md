@@ -108,6 +108,36 @@ key from the certificate name.
 
 Legacy: Replace `[API Key]` with the API key.
 
+## GET PKCS#12 ("PFX"/"P12") (with Certificate, Chain and Private Key)
+
+`GET https://certwarden.example.com/certwarden/api/v1/download/pfx/[Name]`
+
+(Header) `X-API-Key: [API Key]`
+
+or **Legacy Client**:
+
+`GET https://certwarden.example.com/certwarden/api/v1/download/pfx/[Name]/[API Key]`
+
+:::info
+Since this call combines two items with different API keys, a
+special API key format is needed. The API key value for both
+regular and legacy clients is `[cert API key].[key API key]`.
+For example `certAPI123.keyAPIabc`.
+:::
+
+:::info
+Note that this is the modern PKCS#12 variant and not the legacy 
+RC2 format which is widely deprecated. The password for unlocking
+the private key of the resulting file is the API key for the private key.
+:::
+
+Returns the PKCS#12 formatted cert, key and chain. `[Name]` should 
+be the name of the **certificate** (not the key). Cert Warden will 
+deduce the proper key from the certificate name.
+
+Legacy: Replace `[API Key]` with the API key.
+
+
 ## GET Combined Key & Certificate (without Chain)
 
 `GET https://certwarden.example.com/certwarden/api/v1/download/privatecerts/[Name]`
