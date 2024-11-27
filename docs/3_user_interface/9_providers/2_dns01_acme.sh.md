@@ -9,6 +9,13 @@ This dns method provides dns challenge solving for dozens of dns
 providers, and is therefore one of the most likely to be the 
 provider used if you want to use dns-01.
 
+:::danger
+The integration method of acme.sh into Cert Warden is less than ideal and sometimes
+does not work as expected. It is strongly recommended that you use
+[go-acme le-go](/docs/user_interface/providers/dns01_go_acme_le_go)
+instead, if your DNS provider is supported there.
+:::
+
 [acme.sh](https://github.com/acmesh-official/acme.sh) is an ACME shell 
 script that provides a full implementation of ACME (RFC8555). Cert Warden 
 ignores the bulk of the code and leverages acme.sh simply for its wide 
