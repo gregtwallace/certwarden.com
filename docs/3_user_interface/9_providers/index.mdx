@@ -57,9 +57,14 @@ Do not use wildcards here. The provider will be selected for all subdomains
 
 ### Domain Aliases
 
+:::tip
+Domain Aliases are an advanced feature. You do not need to use domain alises to use
+Cert Warden. In fact, most users probably won't use this feature.
+:::
+
 #### Background
 
-Domain Aliases are an advanced feature. In an effort to further secure an environment,
+In an effort to further secure an environment,
 some folks do not like to grant API access for their primary domain to Cert Warden 
 (or any other ACME client for that matter). Instead, the ACME Client is given API 
 access to an alternate domain, perhaps even one with the sole purpose of ACME challenge
