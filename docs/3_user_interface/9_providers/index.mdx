@@ -55,6 +55,55 @@ Do not use wildcards here. The provider will be selected for all subdomains
 (including the wildcard subdomain) of the specified domains.
 :::
 
+### Domain Aliases
+
+#### Background
+
+Domain Aliases are an advanced feature. In an effort to further secure an environment,
+some folks do not like to grant API access for their primary domain to Cert Warden 
+(or any other ACME client for that matter). Instead, the ACME Client is given API 
+access to an alternate domain, perhaps even one with the sole purpose of ACME challenge
+solving. The user then manually creates static CNAME records on the primary domain that
+point at the alternate domain. This allows the ACME client to provision records to the
+alternate domain automatically, which the ACME server will use for validation (via the
+CNAME) without providing the ACME client with full access to the primary domain.
+
+This function is the same as what acme.sh offers via DNS alias mode, which you can
+read more about [here](https://github.com/acmesh-official/acme.sh/wiki/DNS-alias-mode).
+
+#### Usage
+
+First, in Cert Warden, create a challenge provider for the alternate domain that Cert
+Warden will provision text records on (e.g., `insecure-example.com`).
+
+Second, manually login to your DNS Provider and create a CNAME record for each domain
+or subdomain you want a certificate for (e.g., `_acme-challenge.myapp.example.com` CNAME 
+`_acme-challenge.myapp.insecure-example.com`). You must include the `_acme-challenge`
+portion of the name.
+
+:::warning
+Do NOT skip the Second step! If you do not manually create every CNAME record that you
+need, validation will not succeed and you will not be able to acquire certificates.
+:::
+
+Third, under `Providers` -> `Domain Aliases` in Cert Warden, add the alias. Aliases
+automatically include all subdomains, so you do not need to create an alias for every
+subdomain you want a certificate for. For example, the alias in the image would alias
+`_acme-challenge.example.com` to `_acme-challenge.insecure-example.com` as well as
+aliasing `_acme-challenge.myapp.example.com` to `_acme-challenge.myapp.insecure-example.com`.
+
+`Challenge Domain` is the domain you are acquiring certificates for. `Provision Domain`
+is the domain Cert Warden will create DNS records on.
+
+![Edit Account Page](/img/screenshots/domain_aliases.png)
+
+In this example, Cert Warden will provision a TXT dns record on
+`_acme-challenge.myapp.insecure-example.com` when a certificate has a domain name set
+to `myapp.example.com`. When the ACME server tries to validate control of this domain,
+it will encounter your manually create CNAME record when it queries
+`_acme-challenge.myapp.example.com` and will the subsequently query the TXT record on
+`_acme-challenge.myapp.insecure-example.com`.
+
 ### Provider Specific Options
 
 Select your provider for more detailed configuration information.
