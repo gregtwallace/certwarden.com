@@ -50,7 +50,7 @@ provider or if you have a provider that handles most domains, you can configure
 one wildcard provider using a single domain of `*` which directs Cert Warden to use
 the provider for all domains that aren't explicitly defined on another provider.
 
-:::tip
+:::caution
 Do not use wildcards here. The provider will be selected for all subdomains 
 (including the wildcard subdomain) of the specified domains.
 :::
