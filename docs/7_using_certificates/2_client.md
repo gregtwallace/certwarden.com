@@ -60,8 +60,11 @@ you understand these risks.
 :::
 
 Only these environment variables are mandatory:
+- `CW_CLIENT_AES_KEY_BASE64` - The base64 raw url encoding of AES key used for 
+  communication between server and client. Cert Warden generates this on the Server
+  side. It is located under "Edit Certificate" > "Post Processing".
 - `CW_CLIENT_SERVER_ADDRESS` - DNS name of the Cert Warden server. Must start with 
-  https and have a valids ssl certificate.
+  https and have a valid ssl certificate.
 - `CW_CLIENT_KEY_NAME` - Name of the private key in Cert Warden server.
 - `CW_CLIENT_KEY_APIKEY` - API Key of private key in Cert Warden server.
 - `CW_CLIENT_CERT_NAME` - Name of certificate in Cert Warden server.
