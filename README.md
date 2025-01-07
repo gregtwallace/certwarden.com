@@ -3,6 +3,5 @@ Centralized ACME Certificate Management
 Your entire PKI at your fingertips.
 
 ## Website Source
-This is the sourcecode for the Cert Warden (formerly 
-LeGo CertHub) website:
+This is the sourcecode for the Cert Warden website:
 https://www.certwarden.com/
