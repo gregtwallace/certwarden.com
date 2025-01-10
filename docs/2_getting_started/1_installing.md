@@ -11,7 +11,6 @@ and some other miscellaneous files.
 ## Docker
 
 The simplest way to install is to pull the Docker image. The image is available at
-[Docker Hub](https://github.com/gregtwallace/certwarden/releases) and
 [GitHub Packages](https://github.com/gregtwallace/certwarden/releases).
 
 The Docker image requires a persistent data volume for the `/app/data` path.
