@@ -98,7 +98,7 @@ The following placeholders are used in this guide:
  1. Create a new OAuth2/OpenID Provider under **Applications > Providers** using the following settings<br/>**Name:** Cert Warden<br/>**Authentication flow**: default-authentication-flow<br/>**Authorization flow**: default-provider-authorization-explicit-consent<br/>**Client type**: Confidential<br/>**Client ID**: Either create your own Client ID or use the auto-populated ID<br/>**Client Secret**: Either create your own Client Secret or use the auto-populated secret<br/>Take note of the  `<client id>`  and  `<client secret>`  as they are required when configuring Cert Warden.
  2. **Redirect URIs/Origins (RegEx)**<br/>Strict: `https://<certwarden.contoso.com>/certwarden/api/v1/app/auth/oidc/callback`<br/>**Signing Key**: authentik Self-signed Certificate<br/>Leave everything else as default
  3. Open the new provider you've just created. Make a note of the OpenID Configuration Issuer, `<oidc issuer>`
-### Cert Warden configuration
+#### Cert Warden configuration
 Add the following to Cert Wardens configuration file `config.yaml` and restart the container
 ```
 auth:
