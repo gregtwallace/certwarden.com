@@ -15,10 +15,17 @@ the application.
 These widgets show some basic information about the application's
 current state.
 
+The `Frontend Status` widget contains a toggle to display some additional
+debugging information in the client. Some of this information is displayed
+in the browser's console, while other information is shown on various
+pages of the frontend app. 
+
 ## Change Password
 
-This widge allows changing of the password to login. Multiple 
-users are not currently supported.
+This widget allows changing of the password to login. Multiple 
+local users are not currently supported. This widget will not be
+shown if the user is not a local user (e.g., they logged in through
+OIDC).
 
 ## App Updates
 
