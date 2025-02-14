@@ -39,7 +39,7 @@ more specific error details.
 ## Idp General Configuration Notes
 Your Idp should:
 - Support audience `your-certwarden-api.example.com:4055/certwarden/api`
-- Support scope `certwarden:superuser` and add this permission to users who should have access.
+- Support scope `certwarden:superadmin` and add this permission to users who should have access.
 :::warning
 Some Idps do not enforce RBAC by default (e.g., Auth0). You should ensure RBAC is enabled and
 test with unprivileged user(s) to ensure they do not have unintended Cert Warden access.
