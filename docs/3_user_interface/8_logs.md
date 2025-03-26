@@ -1,12 +1,12 @@
 ---
 sidebar_position: 8
-description: 'Logs displays the current log file in the app and provides an option to download all logs.'
+description: 'Logs displays the last 500 log entries and provides an option to download all logs.'
 ---
 
 # Logs
 
-The Logs page shows the content of the current log file. Log files are rotated
-so if you need to view older logs, use the `Download All Logs` button.
+The Logs page shows the last 500 log entries. If you need to view older log entries,
+use the `Download All Logs` button.
 
 Log entries are in the format:
 
