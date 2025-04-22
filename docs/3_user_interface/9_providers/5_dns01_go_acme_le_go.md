@@ -26,6 +26,12 @@ go-acme le-go will make dns queries to a wide variety of dns servers
 as it tries to find the root servers for domains. If you're experiencing
 confusing errors, ensure your dns queries aren't being blocked or otherwise
 tampered with on your network.
+
+Additionally, the Cert Warden system's DNS server(s) will need to be able to
+query public DNS records for your domain. Split DNS scenarios will likely
+cause problems. Cert Warden should always we receive the PUBLIC dns records
+(e.g., your internal DNS server likely won't have copies of the TXT records
+being created publicly).
 :::
 
 ## Configuration
