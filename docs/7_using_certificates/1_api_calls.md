@@ -122,13 +122,17 @@ or **Legacy Client**:
 Since this call combines two items with different API keys, a
 special API key format is needed. The API key value for both
 regular and legacy clients is `[cert API key].[key API key]`.
-For example `certAPI123.keyAPIabc`.
+For example `certAPI123.keyAPIabc`. The password for unlocking
+the private key of the resulting file is the API key for the 
+private key.
 :::
 
-:::info
-Note that this is the modern PKCS#12 variant and not the legacy 
-RC2 format which is widely deprecated. The password for unlocking
-the private key of the resulting file is the API key for the private key.
+:::tip
+By default, the modern PKCS#12 variant is returned (which uses AES
+encryption). Certain legacy systems are not comaptible. If you need
+the legacy, deprecated, format, include `?3des` in your API call.
+You should take additional steps to secure your file system since
+the encryption is weaker.
 :::
 
 Returns the PKCS#12 formatted cert, key and chain. `[Name]` should 
