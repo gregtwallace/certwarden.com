@@ -55,6 +55,29 @@ Do not use wildcards here. The provider will be selected for all subdomains
 (including the wildcard subdomain) of the specified domains.
 :::
 
+### Wait Times
+
+Resource record global propagation can take some time and can be fairly provider
+specific. This is particularly true for DNS record propagation. No one size fits
+all timing exists as this can be highly dependent on the service provider. Cert
+Warden will try to query dns records to ensure they have fully propagated, but 
+this isn't always completely accurate and can lead to unexpected failures.
+
+By default, Cert Warden will wait 3 minutes before attempting DNS record queries
+which is sufficient for many users.
+
+However, since these values can vary so much between providers, two manual configuration
+options are provided.
+
+* `Pre-Check Wait` is the amount of time Cert Warden will wait before attempting
+resource record lookups. For most users the 3 minute default should work.
+* `Post-Check Wait` is an additional amount of time Cert Warden will wait after it
+has found all of the expected resource records.
+
+If you add these two wait times together, this is the **minimum** amount of time between
+Cert Warden provisioning a resource and Cert Warden instructing the ACME Server
+that it can begin resource lookup.
+
 ### Domain Aliases
 
 :::tip
