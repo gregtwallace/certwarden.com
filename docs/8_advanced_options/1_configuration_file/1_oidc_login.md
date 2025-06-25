@@ -17,7 +17,8 @@ Modify your configuration file as follows:
 auth:
     oidc:
         # the first three fields are specified by your OIDC provider:
-        # issuer URL might be very picky (e.g., requiring the trailing forward slash)
+        # The issuer URL must be EXACT (e.g., requiring the trailing forward slash either be
+        # present or not)
         issuer_url: 'https://yourIdp.example.com/'
         client_id: 'some-id'
         client_secret: 'some-secret'
