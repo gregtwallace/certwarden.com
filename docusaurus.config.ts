@@ -74,8 +74,8 @@ const config: Config = {
           position: 'left',
         },
         {
-          to: 'docs/donate',
-          label: 'Donate',
+          to: 'docs/contribute',
+          label: 'Contribute',
           position: 'left',
           activeBaseRegex: '$^', // never show active
         },
@@ -115,8 +115,8 @@ const config: Config = {
           title: 'More',
           items: [
             {
-              label: 'Donate',
-              to: 'docs/donate',
+              label: 'Contribute',
+              to: 'docs/contribute',
             },
             {
               label: 'Source Code',
