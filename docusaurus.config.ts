@@ -19,7 +19,11 @@ const config: Config = {
   projectName: 'certwarden.com', // Usually your repo name.
 
   onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
+  markdown: {
+    hooks: {
+      onBrokenMarkdownLinks: 'warn',
+    },
+  },
 
   // ensure proper compat between sitemap & cloudflare pages; otherwise sitemap slashing
   // is wrong and things like google search indexing don't work properly
