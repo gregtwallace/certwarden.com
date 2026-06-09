@@ -5,7 +5,7 @@ description: "A plugin for OPNsense firewalls."
 
 # OPNsense Plugin
 
-The Cert Warden Client OPNsense Plugin is a plguin to fetch a key and
+The Cert Warden Client OPNsense Plugin is a plugin to fetch a key and
 certificate from Cert Warden and to save them to an OPNsense firewall's
 Trust Store for use.
 
